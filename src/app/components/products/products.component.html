@@ -1,0 +1,46 @@
+<div class="cart-top container-fluid">
+    <div class="conatiner d-flex">
+        <div class="items">
+            <a>
+                <span>
+                <img src="https://img.freepik.com/free-vector/shopping-supermarket-cart-with-grocery-pictogram_1284-11697.jpg?w=740&t=st=1662564938~exp=1662565538~hmac=18124c41e3018d165871e8f68a2ac3b76e708737b783acb231f3b2fcad89e0e2" width="80px" height="80px" ></span>
+                <h6>All Products</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a>
+                <span>
+                <img src="https://thumbs.dreamstime.com/b/electronics-store-glyph-icon-cute-little-computer-shop-symbol-solid-black-eps-vector-building-electronics-store-vector-glyph-icon-160447344.jpg" width="80px" height="80px"></span>
+                <h6>Electronics</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a>
+                <img src="https://www.geo.tv/assets/uploads/updates/2022-01-13/393214_9401751_updates.jpg" width="80px" height="80px">
+                <h6>Fashion</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a>
+                <img src="https://cdn.vectorstock.com/i/1000x1000/50/25/dummy-with-necklace-line-icon-jewellery-vector-23295025.webp" width="80px" height="80px">
+                <h6>Jewllery</h6>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <!-- Jo hamne request ko subscribe krke productList mai dala tha usko ab for loop lagake show krenge interpolation krke -->
+        <ng-container *ngFor="let item of productList">
+        <div class="card col-md-3">
+            <img src="{{item.image}}" alt="">
+            <h5 class="itemdata">{{item.title}}</h5>
+            <p class="itemdata">{{item.description}}</p>
+            <p><strong>Price:</strong>${{item.price}}</p>
+            <p>{{item.category}}</p>        <!--Iss Function mai item variable hoga jo upr ngFor loop ke sath-->
+            <button class="btn btn-primary" (click)="addtoCart(item)">Add to Cart</button>
+        </div>
+    </ng-container>
+    </div>
+</div>

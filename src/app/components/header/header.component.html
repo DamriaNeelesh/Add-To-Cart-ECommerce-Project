@@ -1,0 +1,17 @@
+<header>
+    <div class="navbar navbar-dark bg-primary shadow-sm">
+        <div class="navbar-brand align-item-center d-flex">
+            <i style="font-size: 35px;" class="fas fa-shipping-fast"></i>
+            <strong style="font-size: 30px;" >E-Cart</strong>
+            <div class="forom-group">
+                <input type="text" class="form-control" placeholder="Search products">
+            </div>
+            <span class="fas fa-search search-icon"></span>
+        </div>
+        <button routerLink="cart" class="btn btn-primary">
+            <i style="font-size:30px;" class="fas fa-cart-plus" routerLink="/cart"></i>
+            <div class="badge bg-danger">{{totalItemNumber}}</div> 
+            <!-- Yeh jyadatar Notifivation kitne hain ke liye use kiya jata hai -->
+        </button>
+    </div>
+</header>
